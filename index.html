@@ -56,13 +56,13 @@
       </div>
     </div>
     <script>
-      // 等待页面加载完成
-      // window.addEventListener('load', function () {
-      //   setTimeout(function () {
-      //     document.getElementById('loadingFrame').style.display = 'none';
-      //     document.getElementById('homepage').style.display = 'block';
-      //   }, 10000);
-      // });
+      等待页面加载完成
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          document.getElementById('loadingFrame').style.display = 'none';
+          document.getElementById('homepage').style.display = 'block';
+        }, 10000);
+      });
     </script>
     <div class="bg-textture">
       <div class="container">
@@ -74,10 +74,10 @@
         <!-- 輪播圖 -->
         <div id="a" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#apple" data-bs-slide-to="0" class="active" aria-current="true"
+            <button type="button" data-bs-target="#a" data-bs-slide-to="0" class="active" aria-current="true"
               aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#apple" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#apple" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#a" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#a" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -348,7 +348,7 @@
       }
 
       // // 更新索引，以便下次顯示下一個問題
-      // index = (index + 1) % marqueeTexts.length;
+      index = (index + 1) % marqueeTexts.length;
     }
     // 重新啟動定時器，以顯示下一個跑馬燈文本
     var timer;
