@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+
+</head>
+
+<body>
+    <img src="./img/loading_small.png" class="Load" style="position: relative; width: 10%; height: 10%;display: none;">
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const parent = document.body; // 或者你想要将元素添加到的父元素
+
+            // 创建多个图像元素
+            for (let i = 0; i < 6; i++) {
+                const element = document.createElement('img');
+                element.src = "./img/loading_small.png";
+                element.className = "Load";
+                parent.appendChild(element);
+
+                // 开始时设置元素的初始位置
+                var path = Math.floor(Math.random() * 350);
+                gsap.set(element, { x: path + 50 * i, y: path + 30 * i });
+
+                // 设置动画
+                animateElement(element, i); // 将 i 作为参数传递给 animateElement 函数
+            }
+        });
+
+        function animateElement(element, i) {
+            let lastUpdateTime = Date.now(); // 记录上次更新时间
+
+            gsap.to(element, {
+                duration: 3, // 将持续时间增加到 8 秒
+                opacity: 0.01,
+                ease: "power2.inOut",
+                repeat: -1,
+                yoyo: true,
+                onUpdate: (time) => {
+                    // 获取当前时间
+                    const currentTime = Date.now();
+
+                    // 计算时间间隔
+                    const deltaTime = currentTime - lastUpdateTime;
+
+                    // 如果时间间隔超过 100 毫秒，更新元素位置
+                    if (deltaTime >= 4500) {
+                        var path = Math.floor(Math.random() * 400);
+                        gsap.set(element, { x: path + 50 * i, y: path + 30 * i });
+
+                        // 更新上次更新时间
+                        lastUpdateTime = currentTime;
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

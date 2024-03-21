@@ -1,0 +1,547 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+body {
+    /* background-color: rgb(167, 164, 164); */
+    margin: 0;
+    ;
+}
+
+header {
+    /* background-color: azure;
+    width: 100%;
+    height: 300px;
+    padding: 40px;
+    margin: 40px;
+    border: 5px solid black; 邊框;線條粗細，線條類型 */
+    padding: 0px 20px;
+    /*上下 左右*/
+    border-top: 4px solid rgb(146, 127, 107);
+    background: linear-gradient(to bottom right, rgb(252, 245, 238), rgb(163, 132, 99));
+}
+
+h1 {
+    width: 15%;
+    line-height: 60px;
+    margin: 0;
+    margin-right: 5%;
+}
+
+nav {
+    width: 40%;
+}
+
+nav>ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav>ul>li {
+    width: 25%;
+    text-align: center;
+
+}
+
+nav>ul>li>a {
+    line-height: 40px;
+    /* background-color: rgb(245, 245, 109); */
+    display: block;
+    text-decoration: none;
+    color: rgb(114, 76, 43);
+}
+
+nav>ul>li>a:hover {
+    background-color: rgb(177, 164, 137);
+}
+
+.social_icon {
+    width: 15%;
+    line-height: 60px;
+}
+
+.container {
+    max-width: 1170px;
+    width: 80%;
+    margin: auto;
+    /*區塊置中 */
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+    /*轉為塊級*/
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.text-center {
+    margin: auto;
+    text-align: center;
+}
+
+.text-ehance {
+    font-size: 30px;
+    font-family: cursive;
+    font: bold;
+}
+
+iframe {
+    vertical-align: top;
+}
+
+.position-relative {
+    position: relative;
+    /*相對定位 */
+}
+
+.position-absolute {
+    position: absolute;
+    /*絕對定位 */
+}
+
+.position-sticky {
+    position: sticky;
+    top: 0px;
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+.btn-order {
+    width: 100px;
+    line-height: 80px;
+    background-color: rgb(151, 134, 108);
+    right: 0;
+    right: 20px;
+    /* 距右邊20px */
+    bottom: 20px;
+    /* 距底部20px */
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.2s;
+    /*轉變 */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.btn-order:hover {
+    width: 180px;
+    background-color: palevioletred;
+}
+
+.box-shadow {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.border-radius {
+    border-radius: 20px;
+}
+
+.overflow-hidden {
+    border-radius: 8px;
+}
+
+.picture-fixed {
+    background-color: white;
+}
+
+/* .box{
+    width: 25%; ( 100/4 )
+    background-color: rgb(225, 250, 193);
+    height: 200px;
+    border: 1px solid black;
+    padding: 10px;
+} */
+footer {
+    background: linear-gradient(to bottom left, rgb(252, 245, 238), rgb(163, 132, 99));
+    /* width: 100px;
+    padding: 20px opx opx 20px; 上右下左 
+    margin: 0px 20px 20px 0px;
+    border: 5px solid black;邊框;線條粗細，線條類型 */
+}
+
+/* 後代選取器 空白鍵 */
+footer p {
+    text-align: center;
+    margin: 0;
+}
+
+/* h2 {
+    margin-left: 13%;
+} */
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    padding: 10px;
+}
+
+.col-1 {
+    width: 8.333333333%;
+}
+
+.col-2 {
+    width: 16.66666667%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33333333%;
+}
+
+.col-5 {
+    width: 41.66666667%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33333333%;
+}
+
+.col-8 {
+    width: 66.66666667%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33333333%;
+}
+
+.col-11 {
+    width: 91.66666667%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+/* 根據螢幕大小調整欄位數 */
+@media(max-width:767px) {
+
+    .col-3,
+    .col-4 {
+        width: 100%;
+    }
+}
+
+@media(max-width:1024px) {
+    nav {
+        display: none;
+    }
+}
+
+/* ===================================================================== */
+.product {
+    /* width: 33.3333%; 100/3 */
+    /* width: 25%; */
+    padding: 10px;
+}
+
+.product a {
+    text-decoration: none;
+    color: black;
+}
+
+/* .w-100 */
+.product img {
+    width: 100%;
+}
+
+/* 側邊欄 */
+.sidebar {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.sidebar a {
+    line-height: 40px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding-left: 10px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    /* 字距 */
+}
+
+.sidebar a.active {
+    padding-left: 5px !important;
+    border-left: 5px solid orange !important;
+}
+
+
+.sidebar a:hover {
+    background-color: rgb(247, 215, 177);
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.bg-light {
+    background-color: rgb(237, 176, 110);
+}
+
+.bg-textture {
+    /* position: relative; */
+    background-image: url("../img/bg.png");
+    background-size: 76%;
+}
+
+.bg-image {
+    background-image: url('../image/bgP.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    line-height: 600px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+ol.breadcrumb {
+    padding: 4px;
+    margin: 0px;
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.breadcrumb a {
+    color: rgb(82, 16, 223);
+    text-decoration: none;
+}
+
+.breadcrumb>li+li::before {
+    content: "/";
+}
+
+/* 表格 */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background: black;
+    color: white;
+}
+
+th,
+td {
+    border: 1px solid ghostwhite;
+    padding: 10px;
+}
+
+tr:nth-child(odd) {
+    background-color: lavenderblush;
+}
+
+tr:hover {
+    background-color: darkorange;
+}
+
+.form-contact {
+    font-weight: 900;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+select,
+textarea {
+    border: 1px solid rgb(243, 222, 199);
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    border: none;
+    background-color: rgb(29, 199, 20);
+    color: white;
+    font-size: 18px;
+    border-radius: 4px;
+    width: 100px;
+    cursor: pointer;
+}
+
+/* margin-bottom */
+.mb-1 {
+    margin-bottom: 10px;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
+.mb-3 {
+    margin-bottom: 30px;
+}
+
+.mb-4 {
+    margin-bottom: 40px;
+}
+
+.mb-5 {
+    margin-bottom: 50px;
+}
+
+.tag {
+    background-color: bisque;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    top: -25px;
+    left: 50%;
+    margin-left: -25px;
+}
+
+.margin {
+    margin-left: 30%;
+}
+
+.bgcolor {
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+/* #homepage {
+    display: none;
+  } */
+.marquee {
+    height: 40px;
+    /* 跑馬燈高度 */
+    overflow: hidden;
+    position: relative;
+    font-size: 24px;
+    background-color: rgb(255, 251, 248);
+}
+
+.marquee span {
+    display: inline-block;
+}
+
+.marquee a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.marquee a:hover {
+    text-decoration: underline;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    /* 調整字體大小 */
+    font-weight: bold;
+    /* 加粗文字 */
+    text-align: center;
+}
+
+.correct {
+    color: green;
+    /* 正確答案的文字顏色 */
+}
+
+.wrong {
+    color: red;
+    /* 錯誤答案的文字顏色 */
+}
+
+.slide {
+    width: 100%;
+    height: 100vh;
+    transform: translateX(-100%);
+}
+
+#slide1 {
+    background-image: url("../img/k1.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; /* 避免重复 */
+}
+#slide2 {
+    background-image: url("../img/k2.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; /* 避免重复 */
+}
+#slide3 {
+    background-image: url("../img/k3.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; /* 避免重复 */
+}
+#slide4 {
+    background-image: url("../img/k4.jfif");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; /* 避免重复 */
+}
+#slide5 {
+    background-image: url("../img/k5.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; /* 避免重复 */
+}
+#slide6 {
+    background-image: url("../img/k6.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; /* 避免重复 */
+}

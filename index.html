@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>貓貓園</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="icon" href="./img/icon.ico" type="icon" />
+  <!-- <iframe id="loadingFrame" src="./loading.html" style="width: 100%; height: 100vh; border: none;"></iframe> -->
+
+  <style>
+    .carousel-item>img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="homepage">
+    <header class="clearfix">
+      <h1 class="float-left">
+        <a href="./index.html"><img class="clearfix" src="./img/title.png"></a>
+      </h1>
+      <nav class="float-left">
+        <ul class="clearfix">
+          <li class="float-left text-ehance" style="margin-top: 10px;"> <a href="./about.html">關於貓貓</a></li>
+          <li class="float-left text-ehance" style="margin-top: 10px;"> <a href="./known.html">養貓須知</a></li>
+          <li class="float-left text-ehance" style="margin-top: 10px;"> <a href="./find.html">貓貓找家</a></li>
+          <li class="float-left text-ehance" style="margin-top: 10px;"> <a href="./contact.html">聯絡我們</a></li>
+        </ul>
+      </nav>
+      <nav class="social_icon float-right">
+        <a class="ocial_icon float-right" href="https://www.youtube.com/c/@SoybeanMilkCat" target="_blank"><i
+            class="fa-brands fa-youtube fa-xl" style="color: #dd2727;"></i></i></a>
+        <a class="social_icon float-right" href="https://www.instagram.com/soybeanmilk_cat/" target="_blank"><i
+            class="fa-brands fa-instagram fa-xl" style="color: #c056c2;"></i></i></a>
+        <a class="social_icon float-right" href="https://www.facebook.com/SoybeanMilkCat/?locale=zh_TW"
+          target="_blank"><i class="fa-brands fa-facebook fa-xl" style="color: #0562a8;"></i></a>
+      </nav>
+    </header>
+    <div style="background-color: rgb(245, 227, 201);">
+      <div class="container">
+        <ol class="breadcrumb clearfix">
+          <li class="float-left"><a href="./index.html">首頁</a></li>
+          <li class="float-left">關於貓貓</li>
+        </ol>
+      </div>
+    </div>
+    <script>
+      // 等待页面加载完成
+      // window.addEventListener('load', function () {
+      //   setTimeout(function () {
+      //     document.getElementById('loadingFrame').style.display = 'none';
+      //     document.getElementById('homepage').style.display = 'block';
+      //   }, 10000);
+      // });
+    </script>
+    <div class="bg-textture">
+      <div class="container">
+        <!-- 跑馬燈 -->
+        <div class="marquee">
+          <span id="marqueeText">最新活動：與喵嗚動物醫院合作，如有收養流浪動物，即可享結紮5折，</span>
+          <a id="href" href="./event.html">詳情請點擊</a>
+        </div>
+        <!-- 輪播圖 -->
+        <div id="a" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#apple" data-bs-slide-to="0" class="active" aria-current="true"
+              aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#apple" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#apple" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/cat4.jpg" alt="test4">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/cat3.jpg" alt="test3">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/cat1.jpg" alt="test1">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#a" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#a" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!-- 互動小遊戲 -->
+      <div class="container clearfix col-12">
+        <p>
+        <h2>隨堂小測驗</h2>
+        </p>
+        <div class="col-6 float-left">
+          <img src="./img/bg1.jpg" style="width: 100%">
+        </div>
+        <div class="col-6 float-left">
+          <p>
+          <h2 class="question" style="background-color: rgb(151, 178, 245); border-radius:8px;">&#x1F408;以下哪些是養貓必需用品？
+          </h2>
+          </p>
+          <p class="options">
+            <button class="btn btn-primary text-white" style="margin-right: 50px; border-radius:10px; cursor: pointer;"
+              onclick="checkAnswer('a1')">選項A.飼料</button>
+            <button class="btn btn-primary text-white" style="margin-right: 50px; border-radius:10px; cursor: pointer;"
+              onclick="checkAnswer('a2')">選項B.貓砂</button>
+            <button class="btn btn-primary text-white" style="margin-right: 50px; border-radius:10px; cursor: pointer;"
+              onclick="checkAnswer('a3')">選項C.貓窩</button>
+            <button class="btn btn-primary text-white" style="border-radius:10px; cursor: pointer;"
+              onclick="checkAnswer('a4')">選項D.以上皆是</button>
+          </p>
+        </div>
+        <div class="result" style="display: none;"></div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <img src="./img/modal.jpg" style="height: 30px;">
+                <h4 class="modal-title" id="exampleModalLabel" style="text-align: center;">溫馨小說明(｡•ㅅ•｡)♡</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p id="modal-message"></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-warning next-btn float-right" onclick="nextQuestion()"
+          style="display: none;">下一題</button>
+      </div>
+
+      <div class="container">
+        <h2 style="background-color: white;">暖心新聞</h2>
+        <div class="row">
+          <div class="col-3">
+            <img src="./img/new1.webp" style="width:100%; height:auto;">
+            <a href="https://tw.news.yahoo.com/%E8%B2%93%E8%B7%B3%E5%8F%B0%E7%9B%B4%E6%8E%A5%E6%AD%AA%E6%8E%89%EF%BC%81%E7%B6%B2%E8%A6%8B%E3%80%8C%E6%AF%94%E8%96%A9%E6%96%9C%E5%A1%94%E7%85%A7%E3%80%8D%E5%98%B4%E8%A7%92%E5%A4%B1%E5%AE%88%EF%BC%9A%E5%A4%A7%E6%A9%98%E7%82%BA%E9%87%8D-064301971.html"
+              style="text-decoration: none; font-size: 20px; background-color: white;">貓跳台直接歪掉！網見「比薩斜塔照」嘴角失守：大橘為重</a>
+          </div>
+          <div class="col-3">
+            <img src="./img/new2.webp" style="width:100%; height:auto;">
+            <a href="https://everylittled.com/article/191265"
+              style="text-decoration: none; font-size: 20px; background-color: white;">在台灣也不忘捕捉貓貓們「過度用力」的出糗瞬間</a>
+          </div>
+          <div class="col-3">
+            <img src="./img/new3.jfif" style="width:100%; height:auto;">
+            <a href="https://www.hk01.com/%E5%AF%B5%E7%89%A9/1000789/%E7%B4%94%E7%9C%9F%E8%B2%93%E5%92%AA%E6%9C%80%E6%84%9B%E6%AF%9B%E6%AF%AF-%E6%AF%8F%E5%A4%A9%E9%83%BD%E8%A6%81%E6%8B%96%E8%91%97%E8%B5%B0-%E4%B8%BB%E4%BA%BA%E7%82%BA%E7%89%A0%E6%BA%96%E5%82%99%E4%BA%86%E4%B8%80%E5%80%8B%E7%89%B9%E5%A4%A7%E9%A9%9A%E5%96%9C"
+              style="text-decoration: none; font-size: 20px; background-color: white;">純真貓咪最愛毛毯　每天都要拖著走　主人為牠準備了一個特大驚喜</a>
+          </div>
+          <div class="col-3">
+            <img src="./img/new4.jpg" style="width:100%; height:auto;">
+            <a href="https://news.tvbs.com.tw/local/2429306"
+              style="text-decoration: none; font-size: 20px; background-color: white;">浪貓躲引擎室！暖警餵罐罐「騙出來」　狂呼嚕超萌畫面曝</a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h2 style="background-color: white;">影音專區</h2>
+        <div class="row">
+          <div class="col-6">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fQZfxDe0l6U?si=jGAaNL-jLGKDqOdX"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <div class="col-6">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7L2pTjJcUcU?si=SqvnGKt-RQesUduN"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <a href="./contact.html" class="btn-order position-fixed">聯繫我們</a>
+      <footer>
+        <div class="container">
+          <!-- &nbsp; htnl特殊字元 空白格 -->
+          <p>歡迎轉貼，附上連結 |© <a href="./index.html" style="text-decoration: none;">貓貓園</a></p>
+          <p>copyright&nbsp; &copy; All rights resverd.</p>
+        </div>
+      </footer>
+    </div>
+
+
+  </div>
+  <script>
+    var marqueeTexts = [
+      { text: "最新活動：與喵嗚動物醫院合作，如有收養流浪動物，即可享結紮5折，", url: "./event.html" },
+      { text: "最新消息：台中市大里區仁美路附近有一白底虎斑貓走失，", url: "./find.html" },
+      { text: "最新消息：新北市三重區中正北路附近有一成年公虎斑走失，", url: "./find.html" },
+      { text: "最新活動：參加首頁隨堂小測驗，即有機會抽中指定品牌貓罐頭乙份，", url: "./event.html" }
+    ];
+    var index = 0; // 目前顯示的文本索引
+
+    // 定義函數來切換文本
+    function changeText() {
+      var marqueeElement = document.getElementById("marqueeText");
+      marqueeElement.textContent = marqueeTexts[index].text;
+      document.getElementById("href").href = marqueeTexts[index].url; // 更新超連結的 URL
+      index = (index + 1) % marqueeTexts.length; // 循環顯示文本
+    }
+
+    // 啟動定時器，每10秒執行一次切換文本的函數
+    setInterval(changeText, 10000);
+    // 隨堂測驗
+    var correctAnswerId = 'a4'; // 正確答案的元素 id 
+    var customMessage = "請依經濟能力備好下述物品：食物、食器、貓砂和盆、舒適的窩、玩具、化毛膏、指甲剪、外出籠等等，給貓貓一個安全的家";
+
+    function checkAnswer(selectedAnswerId) {
+      var resultElement = document.querySelector('.result');
+      var nextButton = document.querySelector('.next-btn');
+      var correctAnswerText = ''; // 定義用於存儲正確答案文本的變量
+
+      switch (correctAnswerId) {
+        case 'a1':
+          correctAnswerText = '選項A.飼料';
+          break;
+        case 'a2':
+          correctAnswerText = '選項B.貓砂';
+          break;
+        case 'a3':
+          correctAnswerText = '選項C.貓窩';
+          break;
+        case 'a4':
+          correctAnswerText = '選項D.以上皆是';
+          break;
+        default:
+          correctAnswerText = '未知答案';
+          break;
+      }
+
+      if (selectedAnswerId === correctAnswerId) {
+        resultElement.textContent = '答對了！';
+        resultElement.classList.add('correct'); // 添加正確答案的樣式
+      } else {
+        resultElement.textContent = '答錯了！';
+        resultElement.classList.add('wrong'); // 添加錯誤答案的樣式
+      }
+
+      resultElement.style.display = 'block';
+      nextButton.style.display = 'block'; // 顯示下一題按鈕
+
+      nextButton.setAttribute('onclick', 'nextQuestion()'); // 更新下一題按鈕的點擊事件
+
+      setTimeout(function () {
+        showModal();
+      }, 300); // 3秒後顯示模態框
+    }
+
+    function showModal() {
+      var modal = new bootstrap.Modal(document.getElementById('exampleModal'), {
+        keyboard: false
+      });
+      modal.show();
+      document.getElementById('modal-message').innerText = customMessage;
+    }
+    var cnt = 0;
+    function nextQuestion() {
+      var resultElement = document.querySelector('.result');
+      var nextButton = document.querySelector('.next-btn');
+
+      resultElement.style.display = 'none';
+      nextButton.style.display = 'none';
+
+      // 清空上一個問題和答案
+      var questionElement = document.querySelector('.question');
+      var optionsElement = document.querySelector('.options');
+      questionElement.innerHTML = '';
+      optionsElement.innerHTML = '';
+
+      // 根據索引設置問題和答案
+      if (cnt == 0) {
+        // 問題1
+        questionElement.innerHTML = '<h2>&#x1F408;下列何者不是選擇一隻適合的貓需要考慮的？</h2>';
+        optionsElement.innerHTML = '<button class="btn btn-primary" style="margin-right: 20px; border-radius:10px; cursor: pointer;" onclick="checkAnswer(\'a1\')">選項A.品種貓</button>' +
+          '<button class="btn btn-primary" style="margin-right: 20px; border-radius:10px; cursor: pointer;" onclick="checkAnswer(\'a2\')">選項B.生活習慣</button>' +
+          '<button class="btn btn-primary" style="margin-right: 20px; border-radius:10px; cursor: pointer;" onclick="checkAnswer(\'a3\')">選項C.貓的性格</button>' +
+          '<button class="btn btn-primary" style="margin-right: 20px; border-radius:10px; cursor: pointer;" onclick="checkAnswer(\'a4\')">選項D.住家空間</button>';
+
+        // 更新下一題的答案
+        correctAnswerId = 'a1'; // 更新為新的正確答案 ID
+        customMessage = "品種貓不一定適合你，請多方考量生活習慣、空間預算，以及安靜還是活潑的貓適合你，對自己的貓負責";
+        cnt++;
+      } else if (cnt == 1) {
+        // 問題2
+        questionElement.innerHTML = '<h2>&#x1F408;下列哪個是貓能吃的食物？</h2>';
+        optionsElement.innerHTML = '<button class="btn btn-primary" style="margin-right: 20px; border-radius:10px; cursor: pointer;" onclick="checkAnswer(\'a1\')">選項A.生魚片</button>' +
+          '<button class="btn btn-primary" style="margin-right: 20px; border-radius:10px; cursor: pointer;" onclick="checkAnswer(\'a2\')">選項B.葡萄</button>' +
+          '<button class="btn btn-primary" style="margin-right: 20px; border-radius:10px; cursor: pointer;" onclick="checkAnswer(\'a3\')">選項C.巧克力</button>' +
+          '<button class="btn btn-primary" style="margin-right: 20px; border-radius:10px; cursor: pointer;" onclick="checkAnswer(\'a4\')">選項D.以上皆不是</button>';
+
+        // 更新下一題的答案
+        correctAnswerId = 'a4'; // 更新為新的正確答案 ID
+        customMessage = "貓貓不能吃生魚片/青蔥/洋蔥/韭菜/葡萄/葡萄乾/巧克力/咖啡/紅茶/綠茶/含酒精飲料，若不清楚建議還是盡量餵食合格的貓飼料噢";
+        cnt++;
+      } else if (cnt == 2) {
+        // 問題3
+        questionElement.innerHTML = '<h2>&#x1F408;下列何者不是貓的常見品種？</h2>';
+        optionsElement.innerHTML = '<button class="btn btn-primary" style="margin-right: 20px; border-radius:10px; cursor: pointer;" onclick="checkAnswer(\'a1\')">選項A.賓士</button>' +
+          '<button class="btn btn-primary" style="margin-right: 20px; border-radius:10px; cursor: pointer;" onclick="checkAnswer(\'a2\')">選項B.西施</button>' +
+          '<button class="btn btn-primary" style="margin-right: 20px; border-radius:10px; cursor: pointer;" onclick="checkAnswer(\'a3\')">選項C.玳瑁</button>' +
+          '<button class="btn btn-primary" style="margin-right: 20px; border-radius:10px; cursor: pointer;" onclick="checkAnswer(\'a4\')">選項D.異種短毛</button>';
+
+        // 更新下一題的答案
+        correctAnswerId = 'a2'; // 更新為新的正確答案 ID
+        customMessage = "西施是狗的品種，不是貓的品種。";
+        cnt++;
+      } else if (cnt == 3) {
+        // 結束
+
+        // 創建標題元素
+        var titleElement = document.createElement('h2');
+        titleElement.textContent = '恭喜您完成答題，麻煩留下聯繫方式方便日後中獎聯繫。';
+        titleElement.setAttribute('style', 'background-color: rgb(159, 149, 247)');
+
+        var replyForm = document.createElement('form');
+
+        replyForm.innerHTML = '<label for="userName">姓名：</label>' +
+          '<input type="text" id="userName" name="userName" style="width: 150px; margin-right: 10px;">' +
+          '<label for="userEmail">Email：</label>' +
+          '<input type="email" id="userEmail" name="userEmail" style="width: 200px; margin-right: 10px;"><br>' +
+          '<button type="submit" onclick="submitReply()" class="btn btn-primary">提交回覆</button>';
+
+
+        // 將表單添加到HTML中
+        questionElement.appendChild(replyForm);
+        // 將標題元素插入到表單之前
+        questionElement.parentNode.insertBefore(titleElement, questionElement);
+
+        return; // 結束函數
+      }
+
+      // // 更新索引，以便下次顯示下一個問題
+      // index = (index + 1) % marqueeTexts.length;
+    }
+    // 重新啟動定時器，以顯示下一個跑馬燈文本
+    var timer;
+    clearInterval(timer);
+    timer = setInterval(changeText, 6000);
+
+
+  </script>
+  </div>
+</body>
+
+</html>

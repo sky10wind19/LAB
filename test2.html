@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>簡單問答遊戲</title>
+  <style>
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      /* 調整字體大小 */
+      font-weight: bold;
+      /* 加粗文字 */
+    }
+
+    .correct {
+      color: green;
+      /* 正確答案的文字顏色 */
+    }
+
+    .wrong {
+      color: red;
+      /* 錯誤答案的文字顏色 */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="question">
+      <h2 id="questionText"></h2>
+    </div>
+    <div class="options" id="optionsContainer"></div>
+    <div class="result" style="display: none;"></div>
+    <button class="btn next-btn" onclick="nextQuestion()" style="display: none;">下一題</button>
+  </div>
+
+  <script>
+    var questions = [
+      { question: '問題：2 + 2 = ?', answers: ['4', '5', '6', '7'], correctAnswerIndex: 0 },
+      { question: '問題：3 x 3 = ?', answers: ['6', '7', '8', '9'], correctAnswerIndex: 3 },
+      // 添加更多問題...
+    ];
+    var currentQuestionIndex = 0;
+
+    function displayQuestion() {
+      var questionElement = document.getElementById('questionText');
+      var optionsContainer = document.getElementById('optionsContainer');
+      var currentQuestion = questions[currentQuestionIndex];
+
+      questionElement.textContent = currentQuestion.question;
+      optionsContainer.innerHTML = '';
+
+      currentQuestion.answers.forEach(function (answer, index) {
+        var button = document.createElement('button');
+        button.classList.add('btn');
+        button.textContent = answer;
+        button.onclick = function () {
+          checkAnswer(index);
+        };
+        optionsContainer.appendChild(button);
+      });
+    }
+
+    function checkAnswer(selectedAnswerIndex) {
+      var currentQuestion = questions[currentQuestionIndex];
+      var resultElement = document.querySelector('.result');
+      var nextButton = document.querySelector('.next-btn');
+      var answerButtons = document.querySelectorAll('.btn');
+
+      answerButtons.forEach(function (button) {
+        button.disabled = true; // 禁用所有答題按鈕
+      });
+
+      if (selectedAnswerIndex === currentQuestion.correctAnswerIndex) {
+        resultElement.textContent = '答對了！';
+        resultElement.classList.add('correct');
+      } else {
+        resultElement.textContent = '答錯了！';
+        resultElement.classList.add('wrong');
+      }
+
+      resultElement.style.display = 'block';
+      nextButton.style.display = 'block';
+    }
+
+    function nextQuestion() {
+      var resultElement = document.querySelector('.result');
+      var nextButton = document.querySelector('.next-btn');
+
+      resultElement.style.display = 'none';
+      nextButton.style.display = 'none';
+
+      var answerButtons = document.querySelectorAll('.btn');
+
+      answerButtons.forEach(function (button) {
+        button.disabled = false; // 在顯示下一題之前啟用所有答題按鈕
+      });
+
+      currentQuestionIndex++;
+      if (currentQuestionIndex < questions.length) {
+        displayQuestion();
+      } else {
+        alert('恭喜您完成所有問題！');
+      }
+    }
+
+    // 初始化顯示第一個問題
+    displayQuestion();
+  </script>
+
+</body>
+
+</html>
